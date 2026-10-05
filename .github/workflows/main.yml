@@ -149,6 +149,8 @@ jobs:
           path: versions.json
 
   patch:
+    permissions:
+      contents: write
     name: Patch QQ | 修补 QQ
     needs: check-updates
     if: needs.check-updates.outputs.patch_needed == 'true'
